@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Ulang Tahun Chiara Nadila Kagiling</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(
+          180deg,
+          #ffb3d9 0%,
+          #add8e6 50%,
+          #90ee90 100%
+        );
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+        background: linear-gradient(
+          180deg,
+          #ffb3d9 0%,
+          #add8e6 50%,
+          #90ee90 100%
+        );
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .clouds {
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        top: 0;
+        background: url("");
+        background-size: cover;
+      }
+
+      .dragon-left {
+        position: fixed;
+        left: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 180px;
+        z-index: 10;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(-50%) translateX(0);
+        }
+        50% {
+          transform: translateY(-50%) translateX(10px);
+        }
+      }
+
+      .content {
+        position: relative;
+        z-index: 5;
+        padding: 20px;
+      }
+
+      .header {
+        text-align: center;
+        color: white;
+        padding: 40px 20px;
+      }
+
+      .header h2 {
+        font-size: 16px;
+        font-weight: normal;
+        margin-bottom: 5px;
+      }
+
+      .header h1 {
+        font-size: 42px;
+        color: #ff9b9b;
+        margin: 10px 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+        font-size: 18px;
+        margin-top: 5px;
+      }
+
+      .dragon-circle {
+        width: 180px;
+        height: 180px;
+        margin: 30px auto;
+        background: linear-gradient(135deg, #ff8c69 0%, #ff6b9d 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+      }
+
+      .dragon-circle img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      .intro-box {
+        background: rgba(93, 74, 127, 0.8);
+        border-radius: 20px;
+        padding: 30px 20px;
+        margin: 20px 0;
+        text-align: center;
+        color: white;
+        backdrop-filter: blur(10px);
+      }
+
+      .intro-box h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .intro-box input {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        margin-top: 15px;
+      }
+
+      .btn {
+        background: linear-gradient(135deg, #ff9b9b 0%, #ff7b8a 100%);
+        color: white;
+        border: none;
+        padding: 15px 40px;
+        border-radius: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s;
+      }
+
+      .btn:hover {
+        transform: scale(1.05);
+      }
+
+      .info-card {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 30px;
+        margin: 20px 0;
+        text-align: center;
+      }
+
+      .info-card h3 {
+        color: #7b5fa5;
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+
+      .info-card h2 {
+        color: #5d4a7f;
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      .photo-frame {
+        width: min(200px, 50vw);
+        height: min(200px, 50vw);
+        margin: 20px auto;
+        border: 8px solid #ffd700;
+        border-radius: 20px;
+        overflow: hidden;
+        background: linear-gradient(
+          45deg,
+          #ffd700 0%,
+          #ffa500 50%,
+          #ffd700 100%
+        );
+        padding: 5px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .photo-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+
+      .countdown {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 20px 0;
+      }
+
+      .countdown-item {
+        background: rgba(255, 155, 155, 0.3);
+        border: 2px solid #ff9b9b;
+        border-radius: 10px;
+        padding: 15px;
+        min-width: 60px;
+      }
+
+      .countdown-item .number {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ff9b9b;
+      }
+
+      .countdown-item .label {
+        font-size: 12px;
+        color: #ff9b9b;
+      }
+
+      .section-title {
+        color: #ff9b9b;
+        font-size: 32px;
+        text-align: center;
+        margin: 30px 0 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      .map-container {
+        width: 100%;
+        height: 200px;
+        border-radius: 15px;
+        overflow: hidden;
+        margin: 15px 0;
+      }
+
+      .bank-card {
+        background: white;
+        border-radius: 15px;
+        padding: 20px;
+        margin: 15px 0;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .bank-logo {
+        width: 80px;
+        height: 50px;
+        background: #f0f0f0;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      .bank-info {
+        flex: 1;
+      }
+
+      .bank-info .name {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 5px;
+      }
+
+      .bank-info .number {
+        color: #666;
+        font-size: 14px;
+      }
+
+      .copy-btn {
+        background: #5d4a7f;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 8px;
+        font-size: 12px;
+        cursor: pointer;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: 20px 0;
+      }
+
+      .gallery-item {
+        aspect-ratio: 1;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .gallery-placeholder {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 12px;
+      }
+
+      .rsvp-form {
+        background: rgba(93, 74, 127, 0.8);
+        border-radius: 20px;
+        padding: 30px 20px;
+        margin: 20px 0;
+        backdrop-filter: blur(10px);
+      }
+
+      .rsvp-form h3 {
+        color: #6b98e3;
+        font-size: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .rsvp-form input,
+      .rsvp-form textarea,
+      .rsvp-form select {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+
+      .rsvp-form textarea {
+        min-height: 80px;
+        resize: vertical;
+      }
+
+      .rsvp-form button {
+        background: #6b98e3;
+        width: 100%;
+      }
+
+      .thank-you {
+        text-align: center;
+        padding: 40px 20px;
+        color: white;
+      }
+
+      .thank-you h2 {
+        color: #ff9b9b;
+        font-size: 32px;
+        margin-bottom: 15px;
+      }
+
+      .thank-you p {
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .live-streaming {
+        background: rgba(93, 74, 127, 0.9);
+        border-radius: 20px;
+        padding: 25px;
+        margin: 20px 0;
+        text-align: center;
+        color: white;
+      }
+
+      .live-streaming p {
+        margin-bottom: 15px;
+        line-height: 1.5;
+      }
+
+      /* Media Queries for Responsiveness */
+
+      /* Tablet */
+      @media (min-width: 768px) {
+        .container {
+          max-width: 768px;
+        }
+
+        .header h1 {
+          font-size: 48px;
+        }
+
+        .header h2 {
+          font-size: 18px;
+        }
+
+        .header p {
+          font-size: 20px;
+        }
+
+        .dragon-circle {
+          width: 200px;
+          height: 200px;
+        }
+
+        .dragon-circle img {
+          width: 170px;
+          height: 170px;
+        }
+
+        .photo-frame {
+          width: min(250px, 60vw);
+          height: min(250px, 60vw);
+        }
+
+        .section-title {
+          font-size: 36px;
+        }
+
+        .info-card h2 {
+          font-size: 32px;
+        }
+
+        .countdown-item {
+          padding: 20px;
+          min-width: 70px;
+        }
+
+        .countdown-item .number {
+          font-size: 28px;
+        }
+
+        .countdown-item .label {
+          font-size: 14px;
+        }
+
+        .gallery {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .dragon-left {
+          width: 200px;
+        }
+      }
+
+      /* Desktop */
+      @media (min-width: 1024px) {
+        .container {
+          max-width: 1024px;
+        }
+
+        .header h1 {
+          font-size: 56px;
+        }
+
+        .header h2 {
+          font-size: 20px;
+        }
+
+        .header p {
+          font-size: 22px;
+        }
+
+        .dragon-circle {
+          width: 220px;
+          height: 220px;
+        }
+
+        .dragon-circle img {
+          width: 190px;
+          height: 190px;
+        }
+
+        .photo-frame {
+          width: min(300px, 70vw);
+          height: min(300px, 70vw);
+        }
+
+        .section-title {
+          font-size: 40px;
+        }
+
+        .info-card h2 {
+          font-size: 36px;
+        }
+
+        .countdown-item {
+          padding: 25px;
+          min-width: 80px;
+        }
+
+        .countdown-item .number {
+          font-size: 32px;
+        }
+
+        .countdown-item .label {
+          font-size: 16px;
+        }
+
+        .gallery {
+          grid-template-columns: repeat(4, 1fr);
+        }
+
+        .dragon-left {
+          width: 220px;
+          left: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="clouds"></div>
+
+      <img
+        src="g2.png"
+        alt="Dragon Left"
+        class="dragon-left"
+
+      <div class="content">
+        <!-- Landing Page -->
+        <div id="landing-page">
+          <div class="header">
+            <h2>Undangan Ulang Tahun</h2>
+            <h1>CHIARA NADILA KAGILING</h1>
+            <p>yang ke-8</p>
+          </div>
+
+          <div class="dragon-circle">
+            <img
+              src="2-e.png"
+              alt="Chiara"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+              "
+            />
+          </div>
+
+          <div class="intro-box">
+            <h3>Halo,</h3>
+            <h3>Nama Tamu</h3>
+            <input
+              type="text"
+              id="guestName"
+              placeholder="Masukkan nama Anda"
+            />
+            <button class="btn" onclick="openInvitation()">
+              <span>📧</span> Buka Undangan
+            </button>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div id="main-content" class="hidden">
+          <div class="info-card">
+            <h3>Halo Teman-Teman, Datang Yuk!</h3>
+            <h3>Ke Acara Ulang Tahunku</h3>
+
+            <div class="photo-frame">
+              <img
+                src="chiara.jpeg"
+                alt="Foto Chiara"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  border-radius: 12px;
+                "
+              />
+            </div>
+
+            <h2 style="color: #ff9b9b">Chiara Nadila Kagiling</h2>
+            <p style="color: #666">Putri dari Bapak Awan & Ibu Pelangi</p>
+          </div>
+
+          <!-- Acara Section -->
+          <h2 class="section-title">ACARA</h2>
+          <div class="info-card">
+            <div class="countdown">
+              <div class="countdown-item">
+                <div class="number" id="days">01</div>
+                <div class="label">Hari</div>
+              </div>
+              <div class="countdown-item">
+                <div class="number" id="hours">16</div>
+                <div class="label">Jam</div>
+              </div>
+              <div class="countdown-item">
+                <div class="number" id="minutes">24</div>
+                <div class="label">Menit</div>
+              </div>
+              <div class="countdown-item">
+                <div class="number" id="seconds">00</div>
+                <div class="label">Detik</div>
+              </div>
+            </div>
+
+            <button class="btn" style="margin: 15px auto; display: flex">
+              <span>📅</span> Simpan di Kalender
+            </button>
+
+            <div
+              style="
+                background: rgba(255, 155, 155, 0.1);
+                border-radius: 15px;
+                padding: 20px;
+                margin-top: 20px;
+              "
+            >
+              <h3 style="color: #7b5fa5; margin-bottom: 10px">SABTU</h3>
+              <h1 style="color: #ff9b9b; font-size: 72px; margin: 10px 0">
+                18
+              </h1>
+              <h3 style="color: #5d4a7f; margin-bottom: 5px">OKTOBER 2025</h3>
+              <p style="color: #666">19.00 WIB</p>
+            </div>
+
+            <div style="margin-top: 20px">
+              <h3 style="color: #5d4a7f; margin-bottom: 10px">RUMAH KAMI</h3>
+              <p style="color: #666; font-size: 14px">
+                Perum. Griya Tambak Rel blok G, no. 20 (rmh pink) ujung dekat
+                langgar Al-bayt
+              </p>
+            </div>
+
+            <!-- <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/@-0.4000442,116.8265112,12z/data=!4m10!1m2!2m1!1slanggar+al+bayt!3m6!1s0x2df66f000139c96b:0x483fa60d0a435b08!8m2!3d-0.4000442!4d116.9789465!15sCg9sYW5nZ2FyIGFsIGJheXTaESIPbGFuZ2dhciBhbCBiYXl0kgEGbW9zcXVlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5UVVJCY2s1eE5tMVJSUkFCqgFNEAEqEyIPbGFuZ2dhciBhbCBiYXl0KCYyHxABIhsvy4GOoMDn_1sUh7xbW05BDcApeIH4MU95SB8yExACIg9sYW5nZ2FyIGFsIGJheXTgAQD6AQQIABAm!16s%2Fg%2F11wfhvtc35?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              >
+              </iframe>
+            </div> -->
+
+            <button
+              class="btn"
+              style="
+                margin: 15px auto;
+                display: flex;
+                background: linear-gradient(135deg, #ff6b6b 0%, #ff5252 100%);
+              "
+            >
+              <span>📍</span> Google Map
+            </button>
+          </div>
+
+          <!-- Live Streaming -->
+          <h2 class="section-title">LIVE STREAMING</h2>
+          <div class="live-streaming">
+            <p>
+              Bagi tamu undangan yang berhalangan hadir dan ingin menyaksikan
+              acara kami, silahkan ikuti live streaming dengan klik tombol
+              dibawah.
+            </p>
+            <button
+              class="btn"
+              style="
+                margin: 15px auto;
+                display: flex;
+                background: linear-gradient(135deg, #ff6b6b 0%, #ff5252 100%);
+              "
+            >
+              <span>▶️</span> Live via Youtube
+            </button>
+          </div>
+
+          <!-- Gallery -->
+          <!-- <h2 class="section-title">GALLERY</h2>
+          <div class="gallery">
+            <div class="gallery-item">
+              <div class="gallery-placeholder">DUMMY IMAGE</div>
+            </div>
+            <div class="gallery-item">
+              <div class="gallery-placeholder">DUMMY IMAGE</div>
+            </div>
+            <div class="gallery-item">
+              <div class="gallery-placeholder">DUMMY IMAGE</div>
+            </div>
+            <div class="gallery-item">
+              <div class="gallery-placeholder">DUMMY IMAGE</div>
+            </div>
+          </div> -->
+
+          <!-- Kado Digital -->
+          <!-- <h2 class="section-title">KADO DIGITAL</h2>
+          <div class="info-card">
+            <h3>KIRIM HADIAH</h3>
+            <p style="color: #666; margin-bottom: 20px; font-size: 14px">
+              Jl. Raden Wijaya, Kedung Solo, Kec. Porong, Kab. Sidoarjo
+            </p>
+            <button class="btn" style="margin: 0 auto; display: flex">
+              <span>📋</span> Salin
+            </button>
+          </div>
+
+          <div class="bank-card">
+            <div
+              class="bank-logo"
+              style="background: linear-gradient(135deg, #ff8c42 0%, #ff6b35 100%); color: white;"
+            >
+              BNI
+            </div>
+            <div class="bank-info">
+              <div class="name">Chiara Nadila Kagiling</div>
+              <div class="number">12345678980</div>
+            </div>
+            <button class="copy-btn" onclick="copyToClipboard('12345678980')">
+              <span>📋</span> Copy No. Rekening
+            </button>
+          </div>
+
+          <div class="bank-card">
+            <div
+              class="bank-logo"
+              style="background: linear-gradient(135deg, #005baa 0%, #0066cc 100%); color: white;"
+            >
+              BCA
+            </div>
+            <div class="bank-info">
+              <div class="name">Chiara Nadila Kagiling</div>
+              <div class="number">12345678980</div>
+            </div>
+            <button class="copy-btn" onclick="copyToClipboard('12345678980')">
+              <span>📋</span> Copy No. Rekening
+            </button>
+          </div>
+
+          <button
+            class="btn"
+            style="margin: 20px auto; display: flex; width: calc(100% - 40px); justify-content: center; background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);"
+          >
+            <span>💬</span> Konfirmasi Hadiah
+          </button> -->
+
+          <!-- RSVP -->
+          <h2 class="section-title">RSVP & UCAPAN</h2>
+          <div class="rsvp-form">
+            <h3>2 Comments</h3>
+            <input type="text" placeholder="Nama" required />
+            <textarea placeholder="Ucapan" required></textarea>
+            <select>
+              <option>Konfirmasi Kehadiran</option>
+              <option>Hadir</option>
+              <option>Tidak Hadir</option>
+              <option>Masih Ragu</option>
+            </select>
+            <button class="btn">Kirim</button>
+          </div>
+
+          <div
+            style="background: rgba(93, 74, 127, 0.6); border-radius: 15px; padding: 20px; margin: 20px 0; color: white;"
+          >
+            <p style="font-weight: bold; margin-bottom: 10px">Busted!</p>
+            <p style="font-size: 14px; opacity: 0.9">
+              Terima kasih atas ucapan dan kehadirannya!
+            </p>
+          </div>
+
+          <!-- Thank You -->
+          <div class="thank-you">
+            <div
+              class="dragon-circle"
+              style="width: 150px; height: 150px; margin: 20px auto"
+            >
+              <img
+                src="1-e.png"
+                alt="Chiara"
+                style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"
+              />
+            </div>
+            <h2>TERIMA KASIH!</h2>
+            <p>Aku Tunggu Kehadiran<br />Teman-Teman Yaa</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openInvitation() {
+        const name = document.getElementById("guestName").value;
+        if (name.trim() === "") {
+          alert("Mohon masukkan nama Anda terlebih dahulu");
+          return;
+        }
+
+        document.getElementById("landing-page").classList.add("hidden");
+        document.getElementById("main-content").classList.remove("hidden");
+
+        // Start countdown
+        startCountdown();
+      }
+
+      function startCountdown() {
+        const eventDate = new Date("2025-10-18T19:00:00").getTime();
+
+        const timer = setInterval(function () {
+          const now = new Date().getTime();
+          const distance = eventDate - now;
+
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById("days").textContent = String(days).padStart(
+            2,
+            "0"
+          );
+          document.getElementById("hours").textContent = String(hours).padStart(
+            2,
+            "0"
+          );
+          document.getElementById("minutes").textContent = String(
+            minutes
+          ).padStart(2, "0");
+          document.getElementById("seconds").textContent = String(
+            seconds
+          ).padStart(2, "0");
+
+          if (distance < 0) {
+            clearInterval(timer);
+            document.getElementById("days").textContent = "00";
+            document.getElementById("hours").textContent = "00";
+            document.getElementById("minutes").textContent = "00";
+            document.getElementById("seconds").textContent = "00";
+          }
+        }, 1000);
+      }
+
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(
+          function () {
+            alert("Nomor rekening berhasil disalin: " + text);
+          },
+          function (err) {
+            console.error("Gagal menyalin: ", err);
+          }
+        );
+      }
+    </script>
+  </body>
+</html>
